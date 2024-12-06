@@ -1,0 +1,12 @@
+// Example user profile data
+const userProfile = {
+    name: "John Doe",
+    education: "Bachelor's Degree in Computer Science",
+    certificates: ["Java Programming", "Data Science Basics"],
+    coursesTaken: ["Web Development", "Machine Learning"],
+    spmResults: "A+ in Mathematics, A in English, B in Science",
+    locationPreferences: "Kuala Lumpur, Penang, Johor",
+    degree: "Bachelor of Science in IT",
+    diploma: "Diploma in Information Technology",
+    careerInterests: ["Software Developer", "Data Analyst"],
+};

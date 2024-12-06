@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Courses & Certifications</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Global Styles */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+        }
+
+        header {
+            background-color: #2c3e50;
+            color: white;
+            padding: 20px 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+
+        nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 16px;
+        }
+
+        nav ul li a:hover {
+            text-decoration: underline;
+        }
+
+        main {
+            padding: 100px 20px 50px;
+            margin-top: 100px; /* to compensate for fixed header */
+            text-align: center;
+        }
+
+        main h1 {
+            color: #34495e;
+            font-size: 3em;
+            margin-bottom: 20px;
+        }
+
+        .career-list {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            margin-top: 30px;
+            align-items: center;
+        }
+
+        .career-item {
+            width: 80%;
+            background-color: #ecf0f1;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease;
+        }
+
+        .career-item:hover {
+            transform: translateY(-10px);
+        }
+
+        .career-item h3 {
+            font-size: 24px;
+            color: #34495e;
+        }
+
+        .career-item p {
+            font-size: 16px;
+            color: #7f8c8d;
+        }
+
+        .career-item .universities {
+            margin-top: 10px;
+            font-size: 14px;
+            color: #2980b9;
+        }
+
+        footer {
+            background-color: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 15px 0;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="career-path.html">Career Paths</a></li>
+                <li><a href="job-listings.html">Job Listings</a></li>
+                <li><a href="courses.html">Courses & Certifications</a></li>
+                <li><a href="profile.html">Profile</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Explore Career Opportunities and Courses</h1>
+        <p>Discover various career paths along with the study backgrounds and universities that offer courses for your chosen profession.</p>
+
+        <div class="career-list">
+            <!-- Example Career Item 1 -->
+            <div class="career-item">
+                <h3>Software Engineering</h3>
+                <p>Software Engineers develop applications, systems, and software solutions across various industries.</p>
+                <div class="universities">
+                    <p>Offered by: <strong>University of Malaya (UM), Monash University Malaysia, Universiti Teknologi Malaysia (UTM)</strong></p>
+                </div>
+            </div>
+
+            <!-- Example Career Item 2 -->
+            <div class="career-item">
+                <h3>Healthcare Management</h3>
+                <p>Healthcare Managers are responsible for overseeing operations in hospitals and healthcare facilities.</p>
+                <div class="universities">
+                    <p>Offered by: <strong>Asia Pacific University (APU), University of Cyberjaya, International Medical University (IMU)</strong></p>
+                </div>
+            </div>
+
+            <!-- Example Career Item 3 -->
+            <div class="career-item">
+                <h3>Data Science</h3>
+                <p>Data Scientists analyze large datasets to extract meaningful insights, drive decisions, and innovate solutions.</p>
+                <div class="universities">
+                    <p>Offered by: <strong>University of Malaya (UM), Monash University Malaysia, Taylor's University</strong></p>
+                </div>
+            </div>
+
+            <!-- Example Career Item 4 -->
+            <div class="career-item">
+                <h3>Finance & Accounting</h3>
+                <p>Finance professionals manage financial operations, investment strategies, and financial reporting in organizations.</p>
+                <div class="universities">
+                    <p>Offered by: <strong>Universiti Kebangsaan Malaysia (UKM), Sunway University, INTI International University</strong></p>
+                </div>
+            </div>
+
+            <!-- Example Career Item 5 -->
+            <div class="career-item">
+                <h3>Architecture</h3>
+                <p>Architects design and plan the construction of buildings, landscapes, and urban structures.</p>
+                <div class="universities">
+                    <p>Offered by: <strong>University of Malaya (UM), Universiti Teknologi MARA (UiTM), Taylor's University</strong></p>
+                </div>
+            </div>
+
+            <!-- More career items will be listed here (up to 100 careers) -->
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Career Pathway Platform. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>

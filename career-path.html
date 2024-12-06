@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Career Paths</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="career-path.html">Career Paths</a></li>
+                <li><a href="job-listings.html">Job Listings</a></li>
+                <li><a href="courses.html">Courses & Certifications</a></li>
+                <li><a href="profile.html">Profile</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Choose Your Career Path</h1>
+        <div id="career-paths">
+            <!-- Career paths will be displayed here -->
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Career Pathway Platform. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        // Fetch career paths from the server
+        fetch('getCareers.php')
+            .then(response => response.json())
+            .then(data => {
+                const careerPathsContainer = document.getElementById('career-paths');
+                
+                data.forEach(career => {
+                    const careerDiv = document.createElement('div');
+                    careerDiv.classList.add('career');
+
+                    const careerName = document.createElement('h3');
+                    careerName.textContent = career.career_name;
+
+                    const careerDescription = document.createElement('p');
+                    careerDescription.textContent = career.description;
+
+                    const careerImage = document.createElement('img');
+                    careerImage.src = career.image_url;
+                    careerImage.alt = career.career_name;
+
+                    careerDiv.appendChild(careerName);
+                    careerDiv.appendChild(careerDescription);
+                    careerDiv.appendChild(careerImage);
+
+                    careerPathsContainer.appendChild(careerDiv);
+                });
+            })
+            .catch(error => console.log('Error fetching career paths:', error));
+    </script>
+
+</body>
+</html>

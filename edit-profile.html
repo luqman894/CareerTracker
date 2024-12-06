@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Complete Profile</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #f4f4f9;
+            color: #333;
+        }
+        header {
+            background: linear-gradient(to right, #6a11cb, #2575fc);
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2rem;
+        }
+        .content {
+            padding: 20px;
+            max-width: 800px;
+            margin: auto;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        input, select, textarea, button {
+            width: 100%;
+            padding: 10px;
+            margin: 5px 0 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        textarea {
+            resize: vertical;
+        }
+        button {
+            background: #2575fc;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background: #6a11cb;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Complete Your Profile</h1>
+    </header>
+
+    <div class="content">
+        <form id="completeProfileForm">
+            <!-- Personal Information -->
+            <div class="form-group">
+                <label for="fullName">Full Name:</label>
+                <input type="text" id="fullName" name="fullName" placeholder="Enter your full name">
+            </div>
+            <div class="form-group">
+                <label for="email">Email Address:</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email">
+            </div>
+            <div class="form-group">
+                <label for="homeAddress">Home Address:</label>
+                <textarea id="homeAddress" name="homeAddress" placeholder="Enter your full address"></textarea>
+            </div>
+            <div class="form-group">
+                <label for="phoneNumber">Phone Number:</label>
+                <input type="tel" id="phoneNumber" name="phoneNumber" placeholder="Enter your phone number">
+            </div>
+
+            <!-- Educational Background -->
+            <div class="form-group">
+                <label for="educationLevel">Education Level:</label>
+                <select id="educationLevel" name="educationLevel">
+                    <option value="spm">SPM</option>
+                    <option value="diploma">Diploma</option>
+                    <option value="degree">Degree</option>
+                    <option value="master">Master</option>
+                    <option value="phd">PhD</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="certificates">Certificates:</label>
+                <textarea id="certificates" name="certificates" placeholder="List your certifications, if any"></textarea>
+            </div>
+            <div class="form-group">
+                <label for="courses">Courses Taken:</label>
+                <textarea id="courses" name="courses" placeholder="List your completed courses"></textarea>
+            </div>
+            <div class="form-group">
+                <label for="spmResults">SPM Results:</label>
+                <textarea id="spmResults" name="spmResults" placeholder="Enter your SPM results (e.g., A for Math, B for English)"></textarea>
+            </div>
+            <div class="form-group">
+                <label for="higherEducation">Diploma/Degree Information:</label>
+                <textarea id="higherEducation" name="higherEducation" placeholder="Enter your diploma or degree details, if any"></textarea>
+            </div>
+
+            <!-- Career Preferences -->
+            <div class="form-group">
+                <label for="careerInterest">Interested Career Paths:</label>
+                <select id="careerInterest" name="careerInterest" multiple>
+                    <option value="software_engineer">Software Engineer</option>
+                    <option value="data_scientist">Data Scientist</option>
+                    <option value="graphic_designer">Graphic Designer</option>
+                    <option value="cyber_security">Cyber Security Specialist</option>
+                    <option value="digital_marketer">Digital Marketer</option>
+                    <option value="project_manager">Project Manager</option>
+                    <option value="business_analyst">Business Analyst</option>
+                    <option value="cloud_engineer">Cloud Engineer</option>
+                    <option value="ai_engineer">AI Engineer</option>
+                    <option value="product_designer">Product Designer</option>
+                    <option value="network_administrator">Network Administrator</option>
+                    <option value="content_writer">Content Writer</option>
+                    <option value="hr_specialist">HR Specialist</option>
+                    <option value="financial_analyst">Financial Analyst</option>
+                    <option value="game_developer">Game Developer</option>
+                    <option value="web_developer">Web Developer</option>
+                    <option value="qa_tester">QA Tester</option>
+                    <option value="mobile_app_developer">Mobile App Developer</option>
+                    <option value="devops_engineer">DevOps Engineer</option>
+                    <option value="sales_representative">Sales Representative</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="jobLocations">Preferred Job Locations:</label>
+                <textarea id="jobLocations" name="jobLocations" placeholder="List your preferred job locations"></textarea>
+            </div>
+
+            <button type="submit">Save Profile</button>
+        </form>
+    </div>
+
+    <script>
+        const form = document.getElementById("completeProfileForm");
+        form.addEventListener("submit", (e) => {
+            e.preventDefault();
+            
+            // Capture form data
+            const formData = new FormData(form);
+            const profileData = Object.fromEntries(formData.entries());
+            profileData.careerInterest = formData.getAll("careerInterest");
+
+            // Save to localStorage or send to the server
+            console.log("Profile Data:", profileData);
+            localStorage.setItem("profileData", JSON.stringify(profileData));
+
+            alert("Profile saved successfully!");
+        });
+    </script>
+</body>
+</html>

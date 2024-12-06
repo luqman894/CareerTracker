@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Career Path</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to right, #6a11cb, #2575fc);
+            color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+        .login-container {
+            background: rgba(0, 0, 0, 0.5);
+            padding: 40px;
+            border-radius: 10px;
+            width: 350px;
+            text-align: center;
+        }
+        .login-container h2 {
+            margin-bottom: 20px;
+        }
+        .login-container input {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+            border: none;
+        }
+        .login-container button {
+            width: 100%;
+            padding: 10px;
+            margin: 20px 0;
+            border-radius: 5px;
+            background: #fff;
+            color: #2575fc;
+            font-weight: bold;
+            cursor: pointer;
+            border: none;
+        }
+        .login-container button:hover {
+            background: #ddd;
+        }
+        .error {
+            color: #ff6666;
+            font-size: 0.9rem;
+            margin-top: 10px;
+        }
+    </style>
+    <script>
+        function handleLogin(event) {
+            event.preventDefault(); // Prevent form submission
+
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('password').value;
+            const errorMessage = document.getElementById('error-message');
+
+            // Validation logic
+            if (email === 'luqman@uitm.edu.my' && password === '12345678') {
+                window.location.href = 'dashboard.html'; // Redirect to dashboard
+            } else {
+                errorMessage.textContent = 'Invalid email or password.';
+            }
+        }
+    </script>
+</head>
+<body>
+    <div class="login-container">
+        <h2>Login to Career Path</h2>
+        <form onsubmit="handleLogin(event)">
+            <input type="email" id="email" placeholder="Enter your email" required>
+            <input type="password" id="password" placeholder="Enter your password" required>
+            <button type="submit">Login</button>
+            <div id="error-message" class="error"></div>
+        </form>
+    </div>
+</body>
+</html>

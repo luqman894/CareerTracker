@@ -1,0 +1,616 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Listings - Career Pathway Platform</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Basic Reset */
+        body, ul, li, h1, p, select {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Body Styling */
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f9;
+            color: #333;
+            line-height: 1.6;
+            margin: 0;
+        }
+
+        /* Header Styling */
+        header {
+            background-color: #34495e;
+            color: white;
+            padding: 15px 0;
+        }
+        nav ul {
+            list-style: none;
+            text-align: center;
+        }
+        nav ul li {
+            display: inline;
+            margin: 0 20px;
+        }
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+        }
+        nav ul li a:hover {
+            text-decoration: underline;
+        }
+
+        /* Main Content Styling */
+        main {
+            text-align: center;
+            padding: 50px 20px;
+        }
+        main h1 {
+            font-size: 2em;
+            margin-bottom: 20px;
+        }
+
+        /* Job Listings */
+        .job-listings {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: left;
+        }
+        .job-listing {
+            background-color: #fff;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease-in-out;
+        }
+        .job-listing:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+        }
+        .job-listing .job-title {
+            font-size: 1.2em;
+            font-weight: bold;
+            color: #3498db;
+            margin-bottom: 10px;
+        }
+        .job-listing p {
+            margin-bottom: 10px;
+        }
+
+        .job-listing-description {
+            display: none;
+            font-size: 14px;
+            color: #555;
+            margin-top: 10px;
+        }
+
+        /* Filter Dropdown */
+        #career-path-filter {
+            padding: 10px;
+            font-size: 16px;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+            margin-bottom: 20px;
+            background-color: #fff;
+        }
+
+        /* Animation */
+        .fade-in {
+            animation: fadeIn 1.5s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="career-path.html">Career Paths</a></li>
+                <li><a href="job-listings.html">Job Listings</a></li>
+                <li><a href="courses.html">Courses & Certifications</a></li>
+                <li><a href="profile.html">Profile</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="fade-in">
+        <h1>Job Opportunities in Malaysia</h1>
+    
+        <!-- Career Path Filter -->
+        <select id="career-path-filter">
+            <option value="All">All Career Paths</option>
+            <option value="Technology">Technology</option>
+            <option value="Healthcare">Healthcare</option>
+            <option value="Finance">Finance</option>
+            <option value="Education">Education</option>
+            <option value="Engineering">Engineering</option>
+        </select>
+    
+        <!-- Job Listings -->
+        <div class="job-listings">
+            <!-- Technology Jobs -->
+            <div class="job-listing Technology">
+                <div class="job-title">Software Developer - Petronas</div>
+                <p>Join Petronas as a software developer working on enterprise-level systems.</p>
+                <div class="job-listing-description">
+                    <p>As a software developer at Petronas, you will be involved in the development of innovative solutions for energy industry applications. Knowledge of Java, C++, and Cloud systems is a must.</p>
+                </div>
+            </div>
+            <div class="job-listing Technology">
+                <div class="job-title">Web Developer - Maxis</div>
+                <p>Maxis is hiring a web developer to build responsive websites.</p>
+                <div class="job-listing-description">
+                    <p>Develop cutting-edge web applications and manage websites. Experience with JavaScript, React, and responsive design needed.</p>
+                </div>
+            </div>
+            <!-- Added 13 more Technology jobs -->
+            <div class="job-listing Technology">
+                <div class="job-title">Backend Developer - Grab</div>
+                <p>Grab is hiring a backend developer to join their growing team.</p>
+                <div class="job-listing-description">
+                    <p>Work on the backend development of the Grab platform. Expertise in Node.js, databases, and cloud technologies is needed.</p>
+                </div>
+            </div>
+            <div class="job-listing Technology">
+                <div class="job-title">Cloud Architect - Microsoft</div>
+                <p>Join Microsoft as a Cloud Architect to design cloud solutions.</p>
+                <div class="job-listing-description">
+                    <p>Design and implement scalable cloud architectures. Experience with Azure, AWS, or Google Cloud required.</p>
+                </div>
+            </div>
+            <div class="job-listing Technology">
+                <div class="job-title">UI/UX Designer - AirAsia</div>
+                <p>AirAsia is looking for a UI/UX Designer to improve user experience on their platforms.</p>
+                <div class="job-listing-description">
+                    <p>Design intuitive and engaging interfaces for web and mobile platforms. Strong portfolio and knowledge of design tools needed.</p>
+                </div>
+            </div>
+            <div class="job-listing Technology">
+                <div class="job-title">DevOps Engineer - Petronas</div>
+                <p>Join Petronas as a DevOps Engineer to streamline development pipelines.</p>
+                <div class="job-listing-description">
+                    <p>Work on automating processes and improving collaboration between development and operations teams. Knowledge of Jenkins, Docker, and Kubernetes required.</p>
+                </div>
+            </div>
+            <div class="job-listing Technology">
+                <div class="job-title">Full Stack Developer - Telekom Malaysia</div>
+                <p>Telekom Malaysia is hiring a full stack developer.</p>
+                <div class="job-listing-description">
+                    <p>Develop both the front-end and back-end of web applications. Proficiency in JavaScript, React, Node.js, and databases is required.</p>
+                </div>
+            </div>
+            <div class="job-listing Technology">
+                <div class="job-title">Mobile App Developer - Digi</div>
+                <p>Digi is hiring a mobile app developer to create iOS and Android apps.</p>
+                <div class="job-listing-description">
+                    <p>Develop and maintain mobile applications. Proficiency in Swift, Kotlin, and mobile app design principles needed.</p>
+                </div>
+            </div>
+            <div class="job-listing Technology">
+                <div class="job-title">Data Analyst - Petronas</div>
+                <p>Petronas is looking for a Data Analyst to analyze business data.</p>
+                <div class="job-listing-description">
+                    <p>Interpret and visualize business data. Strong skills in SQL, Excel, and data visualization tools required.</p>
+                </div>
+            </div>
+            <div class="job-listing Technology">
+                <div class="job-title">Cybersecurity Analyst - Sunway Group</div>
+                <p>Sunway Group is hiring a Cybersecurity Analyst.</p>
+                <div class="job-listing-description">
+                    <p>Ensure the security of Sunway's digital assets. Experience with network security tools, vulnerability assessments, and penetration testing required.</p>
+                </div>
+            </div>
+            <div class="job-listing Technology">
+                <div class="job-title">Data Engineer - Axiata</div>
+                <p>Axiata is looking for a Data Engineer to manage large datasets.</p>
+                <div class="job-listing-description">
+                    <p>Work with big data technologies to design, build, and maintain data pipelines. Experience in Hadoop, Spark, and SQL required.</p>
+                </div>
+            </div>
+            <div class="job-listing Technology">
+                <div class="job-title">AI Engineer - Shopee</div>
+                <p>Shopee is hiring an AI Engineer to develop AI solutions.</p>
+                <div class="job-listing-description">
+                    <p>Develop machine learning models and AI-driven features for Shopee's platform. Proficiency in Python, TensorFlow, and AI frameworks needed.</p>
+                </div>
+            </div>
+            <div class="job-listing Technology">
+                <div class="job-title">Game Developer - Razer</div>
+                <p>Razer is looking for a game developer.</p>
+                <div class="job-listing-description">
+                    <p>Work on game design and development. Proficiency in Unity, Unreal Engine, and C++ required.</p>
+                </div>
+            </div>
+            <div class="job-listing Technology">
+                <div class="job-title">Network Engineer - UEM Group</div>
+                <p>UEM Group is hiring a Network Engineer to manage and optimize network infrastructures.</p>
+                <div class="job-listing-description">
+                    <p>Work with network devices and services, ensuring the efficiency and reliability of the network. Experience with Cisco, Juniper, and network protocols required.</p>
+                </div>
+            </div>
+    
+            <!-- Healthcare Jobs -->
+            <div class="job-listing Healthcare">
+                <div class="job-title">Medical Officer - KPJ Healthcare</div>
+                <p>KPJ Healthcare is hiring a Medical Officer.</p>
+                <div class="job-listing-description">
+                    <p>Provide diagnosis and treatment at one of Malaysia's leading healthcare providers. Must have a medical degree and clinical experience.</p>
+                </div>
+            </div>
+            <div class="job-listing Healthcare">
+                <div class="job-title">Nurse - Pantai Hospital</div>
+                <p>Pantai Hospital is hiring nurses.</p>
+                <div class="job-listing-description">
+                    <p>Provide care and assistance to patients in a healthcare setting. Must have nursing certification and experience in patient care.</p>
+                </div>
+            </div>
+            <!-- Added 13 more Healthcare jobs -->
+            <div class="job-listing Healthcare">
+                <div class="job-title">Physiotherapist - Sunway Medical Centre</div>
+                <p>Join Sunway Medical Centre as a Physiotherapist.</p>
+                <div class="job-listing-description">
+                    <p>Provide rehabilitation services to patients. A degree in Physiotherapy and experience in clinical settings required.</p>
+                </div>
+            </div>
+            <div class="job-listing Healthcare">
+                <div class="job-title">Pharmacist - Guardian Malaysia</div>
+                <p>Guardian is hiring a Pharmacist.</p>
+                <div class="job-listing-description">
+                    <p>Dispense medications and provide patient consultation services. Degree in Pharmacy and a valid license required.</p>
+                </div>
+            </div>
+            <div class="job-listing Healthcare">
+                <div class="job-title">Clinical Psychologist - KPJ Healthcare</div>
+                <p>KPJ Healthcare is looking for a Clinical Psychologist.</p>
+                <div class="job-listing-description">
+                    <p>Provide psychological assessments and counseling. Master’s in Psychology and relevant experience required.</p>
+                </div>
+            </div>
+            <div class="job-listing Healthcare">
+                <div class="job-title">Occupational Therapist - Pantai Hospital</div>
+                <p>Pantai Hospital is hiring an Occupational Therapist.</p>
+                <div class="job-listing-description">
+                    <p>Assist patients in overcoming physical challenges. Degree in Occupational Therapy and clinical experience required.</p>
+                </div>
+            </div>
+            <div class="job-listing Healthcare">
+                <div class="job-title">Lab Technician - Sunway Medical Centre</div>
+                <p>Sunway Medical Centre is hiring a Lab Technician.</p>
+                <div class="job-listing-description">
+                    <p>Conduct medical lab tests and support diagnostic procedures. Diploma in Medical Laboratory Technology required.</p>
+                </div>
+            </div>
+            <div class="job-listing Healthcare">
+                <div class="job-title">Radiographer - Pantai Hospital</div>
+                <p>Pantai Hospital is hiring a Radiographer.</p>
+                <div class="job-listing-description">
+                    <p>Operate medical imaging equipment to assist in patient diagnoses. Degree in Radiography required.</p>
+                </div>
+            </div>
+            <div class="job-listing Healthcare">
+                <div class="job-title">Dentist - Klinik Pergigian</div>
+                <p>Klinik Pergigian is looking for a Dentist.</p>
+                <div class="job-listing-description">
+                    <p>Provide dental care services. A dental degree and valid registration required.</p>
+                </div>
+            </div>
+            <div class="job-listing Healthcare">
+                <div class="job-title">Emergency Medical Technician - St. John's Ambulance</div>
+                <p>St. John's Ambulance is hiring an Emergency Medical Technician.</p>
+                <div class="job-listing-description">
+                    <p>Provide emergency medical care in critical situations. Certification as an EMT required.</p>
+                </div>
+            </div>
+            <div class="job-listing Healthcare">
+                <div class="job-title">Nutritionist - Health Ministry</div>
+                <p>Health Ministry is hiring a Nutritionist.</p>
+                <div class="job-listing-description">
+                    <p>Provide nutrition consultation and support in healthcare settings. Degree in Nutrition and related certifications required.</p>
+                </div>
+            </div>
+            <div class="job-listing Healthcare">
+                <div class="job-title">Surgical Assistant - KPJ Damansara</div>
+                <p>KPJ Damansara is hiring a Surgical Assistant.</p>
+                <div class="job-listing-description">
+                    <p>Assist surgeons during operations. Diploma in Surgical Assisting required.</p>
+                </div>
+            </div>
+    
+            <!-- Finance Jobs -->
+            <div class="job-listing Finance">
+                <div class="job-title">Financial Analyst - CIMB Bank</div>
+                <p>CIMB Bank is hiring a Financial Analyst.</p>
+                <div class="job-listing-description">
+                    <p>Analyze financial data and help make investment decisions. Experience with financial modeling and analysis is required.</p>
+                </div>
+            </div>
+            <div class="job-listing Finance">
+                <div class="job-title">Accountant - Maybank</div>
+                <p>Maybank is hiring an Accountant.</p>
+                <div class="job-listing-description">
+                    <p>Prepare financial statements, manage accounts, and ensure compliance with regulatory standards. CPA certification preferred.</p>
+                </div>
+            </div>
+            <!-- Added 13 more Finance jobs -->
+            <div class="job-listing Finance">
+                <div class="job-title">Risk Manager - Bank Negara</div>
+                <p>Bank Negara is hiring a Risk Manager.</p>
+                <div class="job-listing-description">
+                    <p>Assess and mitigate financial risks within the organization. Experience in risk management and relevant certifications required.</p>
+                </div>
+            </div>
+            <div class="job-listing Finance">
+                <div class="job-title">Investment Banker - RHB Bank</div>
+                <p>RHB Bank is looking for an Investment Banker.</p>
+                <div class="job-listing-description">
+                    <p>Assist clients with investments, mergers, and acquisitions. Prior experience in investment banking and financial markets is required.</p>
+                </div>
+            </div>
+            <div class="job-listing Finance">
+                <div class="job-title">Treasury Manager - HSBC</div>
+                <p>HSBC is hiring a Treasury Manager.</p>
+                <div class="job-listing-description">
+                    <p>Manage the liquidity and financial strategies of the bank. Strong knowledge of cash flow management and treasury operations required.</p>
+                </div>
+            </div>
+            <div class="job-listing Finance">
+                <div class="job-title">Tax Manager - Deloitte</div>
+                <p>Deloitte is hiring a Tax Manager.</p>
+                <div class="job-listing-description">
+                    <p>Manage corporate tax compliance and planning. CPA or similar tax certification required.</p>
+                </div>
+            </div>
+            <div class="job-listing Finance">
+                <div class="job-title">Credit Analyst - Hong Leong Bank</div>
+                <p>Hong Leong Bank is hiring a Credit Analyst.</p>
+                <div class="job-listing-description">
+                    <p>Evaluate credit risk and assess loan applications. Relevant experience in credit analysis and risk management required.</p>
+                </div>
+            </div>
+            <div class="job-listing Finance">
+                <div class="job-title">Financial Planner - Prudential</div>
+                <p>Prudential is hiring a Financial Planner.</p>
+                <div class="job-listing-description">
+                    <p>Assist clients in planning their financial futures. Certification in financial planning required.</p>
+                </div>
+            </div>
+            <div class="job-listing Finance">
+                <div class="job-title">Accounts Receivable Clerk - Telekom Malaysia</div>
+                <p>Telekom Malaysia is hiring an Accounts Receivable Clerk.</p>
+                <div class="job-listing-description">
+                    <p>Handle the company's incoming payments and ensure records are accurate. Accounting diploma and experience in receivables preferred.</p>
+                </div>
+            </div>
+            <div class="job-listing Finance">
+                <div class="job-title">Corporate Treasurer - Maybank</div>
+                <p>Maybank is hiring a Corporate Treasurer.</p>
+                <div class="job-listing-description">
+                    <p>Oversee corporate cash management and investment strategies. Experience in treasury and risk management required.</p>
+                </div>
+            </div>
+            <!-- Education Jobs -->
+<div class="job-listing Education">
+    <div class="job-title">Teacher - International School of Kuala Lumpur</div>
+    <p>International School of Kuala Lumpur is hiring a teacher for various subjects.</p>
+    <div class="job-listing-description">
+        <p>Deliver engaging lessons and foster a positive learning environment. Teaching certification and experience in an international setting required.</p>
+    </div>
+</div>
+<div class="job-listing Education">
+    <div class="job-title">Education Consultant - Taylor's University</div>
+    <p>Taylor's University is hiring an Education Consultant.</p>
+    <div class="job-listing-description">
+        <p>Provide consultation on curriculum development and student support. Degree in Education or related field required.</p>
+    </div>
+</div>
+<!-- Added 13 more Education jobs -->
+<div class="job-listing Education">
+    <div class="job-title">Lecturer - University of Malaya</div>
+    <p>University of Malaya is hiring a lecturer for their faculty.</p>
+    <div class="job-listing-description">
+        <p>Teach undergraduate and graduate courses. PhD or Master's in the respective subject area required.</p>
+    </div>
+</div>
+<div class="job-listing Education">
+    <div class="job-title">Special Education Teacher - SJKC</div>
+    <p>SJKC is hiring a Special Education Teacher.</p>
+    <div class="job-listing-description">
+        <p>Assist children with special needs in their learning journey. A degree in Special Education required.</p>
+    </div>
+</div>
+<div class="job-listing Education">
+    <div class="job-title">School Administrator - Seri Cempaka International School</div>
+    <p>Seri Cempaka International School is looking for a School Administrator.</p>
+    <div class="job-listing-description">
+        <p>Manage the administrative aspects of the school. Strong organizational and leadership skills are needed.</p>
+    </div>
+</div>
+<div class="job-listing Education">
+    <div class="job-title">Librarian - International School of Penang</div>
+    <p>International School of Penang is hiring a Librarian.</p>
+    <div class="job-listing-description">
+        <p>Manage the school library, assist students with research, and maintain library records. Degree in Library Science or related field required.</p>
+    </div>
+</div>
+<div class="job-listing Education">
+    <div class="job-title">Primary School Teacher - SK Seri Sentosa</div>
+    <p>SK Seri Sentosa is hiring a Primary School Teacher.</p>
+    <div class="job-listing-description">
+        <p>Teach primary school students in various subjects. Teaching certification and experience in primary education required.</p>
+    </div>
+</div>
+<div class="job-listing Education">
+    <div class="job-title">Education Coordinator - EtonHouse International School</div>
+    <p>EtonHouse International School is hiring an Education Coordinator.</p>
+    <div class="job-listing-description">
+        <p>Coordinate educational programs and initiatives. Degree in Education and experience in education administration required.</p>
+    </div>
+</div>
+<div class="job-listing Education">
+    <div class="job-title">Curriculum Developer - INTI International College</div>
+    <p>INTI International College is hiring a Curriculum Developer.</p>
+    <div class="job-listing-description">
+        <p>Develop and evaluate curriculum materials. Expertise in instructional design and curriculum development required.</p>
+    </div>
+</div>
+<div class="job-listing Education">
+    <div class="job-title">Early Childhood Educator - Kinderland Malaysia</div>
+    <p>Kinderland Malaysia is hiring an Early Childhood Educator.</p>
+    <div class="job-listing-description">
+        <p>Work with young children to promote development. Degree in Early Childhood Education and experience required.</p>
+    </div>
+</div>
+<div class="job-listing Education">
+    <div class="job-title">Teacher Trainer - British Council</div>
+    <p>British Council is hiring a Teacher Trainer.</p>
+    <div class="job-listing-description">
+        <p>Provide training for new teachers. Teaching qualification and experience in teacher training are required.</p>
+    </div>
+</div>
+<div class="job-listing Education">
+    <div class="job-title">School Counselor - KDU University College</div>
+    <p>KDU University College is hiring a School Counselor.</p>
+    <div class="job-listing-description">
+        <p>Provide emotional and psychological support to students. Degree in Counseling or Psychology required.</p>
+    </div>
+</div>
+
+<!-- Engineering Jobs -->
+<div class="job-listing Engineering">
+    <div class="job-title">Civil Engineer - Gamuda Berhad</div>
+    <p>Gamuda Berhad is hiring a Civil Engineer.</p>
+    <div class="job-listing-description">
+        <p>Work on large-scale construction and infrastructure projects. Degree in Civil Engineering and relevant experience required.</p>
+    </div>
+</div>
+<div class="job-listing Engineering">
+    <div class="job-title">Mechanical Engineer - Sime Darby Industrial</div>
+    <p>Sime Darby Industrial is hiring a Mechanical Engineer.</p>
+    <div class="job-listing-description">
+        <p>Design and develop mechanical systems for industrial machinery. A degree in Mechanical Engineering and experience in machinery design required.</p>
+    </div>
+</div>
+<!-- Added 13 more Engineering jobs -->
+<div class="job-listing Engineering">
+    <div class="job-title">Electrical Engineer - Tenaga Nasional Berhad</div>
+    <p>Tenaga Nasional Berhad is hiring an Electrical Engineer.</p>
+    <div class="job-listing-description">
+        <p>Work on electrical grid projects and maintenance. Degree in Electrical Engineering and experience with power systems required.</p>
+    </div>
+</div>
+<div class="job-listing Engineering">
+    <div class="job-title">Structural Engineer - WSP Global</div>
+    <p>WSP Global is hiring a Structural Engineer.</p>
+    <div class="job-listing-description">
+        <p>Design and analyze structural systems for buildings and infrastructure projects. Degree in Structural Engineering and relevant experience required.</p>
+    </div>
+</div>
+<div class="job-listing Engineering">
+    <div class="job-title">Software Engineer - IBM</div>
+    <p>IBM is hiring a Software Engineer to develop cutting-edge software solutions.</p>
+    <div class="job-listing-description">
+        <p>Develop and test software applications for various industries. Proficiency in Python, Java, and cloud technologies required.</p>
+    </div>
+</div>
+<div class="job-listing Engineering">
+    <div class="job-title">Process Engineer - Petronas</div>
+    <p>Petronas is hiring a Process Engineer for their oil and gas division.</p>
+    <div class="job-listing-description">
+        <p>Work on optimizing industrial processes for efficiency. Degree in Chemical or Process Engineering required.</p>
+    </div>
+</div>
+<div class="job-listing Engineering">
+    <div class="job-title">Project Engineer - Bina Puri</div>
+    <p>Bina Puri is hiring a Project Engineer for construction projects.</p>
+    <div class="job-listing-description">
+        <p>Oversee construction projects and ensure they meet deadlines. Degree in Engineering and experience in project management required.</p>
+    </div>
+</div>
+<div class="job-listing Engineering">
+    <div class="job-title">Automation Engineer - YTL Power</div>
+    <p>YTL Power is hiring an Automation Engineer.</p>
+    <div class="job-listing-description">
+        <p>Implement and maintain automation systems in power plants. Knowledge of PLC, SCADA, and industrial automation systems required.</p>
+    </div>
+</div>
+<div class="job-listing Engineering">
+    <div class="job-title">Environmental Engineer - Indah Water Konsortium</div>
+    <p>Indah Water Konsortium is hiring an Environmental Engineer.</p>
+    <div class="job-listing-description">
+        <p>Ensure compliance with environmental regulations in wastewater treatment. Degree in Environmental Engineering required.</p>
+    </div>
+</div>
+<div class="job-listing Engineering">
+    <div class="job-title">Quality Control Engineer - Denso</div>
+    <p>Denso is hiring a Quality Control Engineer.</p>
+    <div class="job-listing-description">
+        <p>Manage and ensure product quality standards in manufacturing processes. Experience in quality control and manufacturing required.</p>
+    </div>
+</div>
+<div class="job-listing Engineering">
+    <div class="job-title">Data Engineer - Micron Technology</div>
+    <p>Micron Technology is hiring a Data Engineer.</p>
+    <div class="job-listing-description">
+        <p>Work on big data analytics and manage data pipelines. Experience with Hadoop, Spark, and SQL required.</p>
+    </div>
+</div>
+<div class="job-listing Engineering">
+    <div class="job-title">IT Support Engineer - Intel</div>
+    <p>Intel is hiring an IT Support Engineer to provide technical assistance.</p>
+    <div class="job-listing-description">
+        <p>Assist with IT issues and support hardware and software systems. Relevant IT certifications and experience required.</p>
+    </div>
+</div>
+
+        </div>
+    </main>
+    
+
+    <footer>
+        <p>&copy; 2024 Career Pathway Platform. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const jobListings = document.querySelectorAll('.job-listing');
+            const careerPathFilter = document.getElementById('career-path-filter');
+
+            jobListings.forEach(job => {
+                job.addEventListener('mouseover', function() {
+                    job.querySelector('.job-listing-description').style.display = 'block';
+                });
+                job.addEventListener('mouseout', function() {
+                    job.querySelector('.job-listing-description').style.display = 'none';
+                });
+            });
+
+            // Filter job listings based on selected career path
+            careerPathFilter.addEventListener('change', function() {
+                const selectedValue = this.value;
+                jobListings.forEach(job => {
+                    if (selectedValue === 'All' || job.classList.contains(selectedValue)) {
+                        job.style.display = 'block';
+                    } else {
+                        job.style.display = 'none';
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
