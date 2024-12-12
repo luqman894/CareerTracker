@@ -1,6 +1,6 @@
 // Example user profile data
 const userProfile = {
-    name: "John Doe",
+    name: "Luqman Harith",
     education: "Bachelor's Degree in Computer Science",
     certificates: ["Java Programming", "Data Science Basics"],
     coursesTaken: ["Web Development", "Machine Learning"],
